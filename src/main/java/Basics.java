@@ -1,67 +1,18 @@
-/**
- * This file contains a few exercises to familiarize you with Java.
- * You should read this file from top-to-bottom. Any tasks you are to complete
- * are labelled with TODO
- *
- * For your convenience, we have also included references to the
- * relevant readings for each task.
- */
-
-/**
- *  1. In Java, no code can exist outside of a class. Unlike Python which uses
- *    functions, all code in Java uses methods.
- *
- *    For this exercise, all of our code is within the Basics class.
- *
- *    (Relevant reading: 1.1.1. Defining classes)
- */
 public class Basics {
-
-    /**
-     *  2. In Python, we could have code in a block labelled:
-     *        if __name__ == '__main__':
-     *            # Code goes in here
-     *    However in Java, the equivalent is the main method:
-     *        public static void main(final String[] args){
-     *            // Code goes in here
-     *        }
-     *
-     *    When you run this file (Basics.java), the code within the main
-     *    method is run.
-     *
-     *    (Relevant reading: 1.1.2. Defining methods)
-     */
     public static void main(final String[] args) {
-        /* 3. In Python, we could print out code using the print() function.
-         *    In Java, we do the same thing by using System.out.println();
-         *    In the line below, we print the result of 7 + 5
-         *
-         *    (Relevant reading: 1.1.3. Printing things)
-         */
         System.out.println(7 + 5);
 
         /* TODO (Task 1): Write a line of code below that prints the string
          *                Hello World!
          */
-
-
-
-        /* 4. In Python, we could declare variables using a simple assignment
-         *    statement. For example:
-         *        x = 10
-         *    In Java, we have to specify the variable's type as well:
-         *        int x = 10;
-         *    We can also create variables without assigning a value to them
-         *    for future use:
-         *        int x;
-         *
-         *    (Relevant reading: 1.2. Variables and Types)
-         */
+        System.out.println("Hello World!");
 
         /*
          * TODO (Task 2): Create a variable named my_variable and assign it the
          *                value 100.
          */
+
+        int my_variable = 100;
 
 
 
@@ -100,7 +51,9 @@ public class Basics {
          * Current count: 0
          */
 
-
+        for(int i = 10; i >=0; i--){
+            System.out.println("Current count: " + i);
+        }
     }
 
     /**
@@ -141,8 +94,14 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
+        ret.append(to_split.charAt(0));
+        for(int i = 0; i < to_split.length(); i++){
+            if (to_split.charAt(i) == ' '){
+                ret.append(to_split.charAt(i + 1));
+            }
+        }
 
-        // Fill in the rest of the body here
+
 
         return ret.toString();
     }
@@ -170,6 +129,11 @@ public class Basics {
          *                You can index into arrays as we do in Python
          *                (e.g. arr[i] gives you the item at index i).
          */
+        for(int i = 0; i < arr.length; i++){
+            if(i % 2 != 0){
+                current_sum += arr[i];
+            }
+        }
 
         return current_sum;
     }
