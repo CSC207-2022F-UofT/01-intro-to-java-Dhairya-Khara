@@ -94,11 +94,15 @@ public class Basics {
          *                you may use them if you wish.
          */
         StringBuilder ret = new StringBuilder();
-        ret.append(to_split.charAt(0));
-        for(int i = 0; i < to_split.length(); i++){
-            if (to_split.charAt(i) == ' '){
-                ret.append(to_split.charAt(i + 1));
-            }
+//        ret.append(to_split.charAt(0));
+//        for(int i = 0; i < to_split.length(); i++){
+//            if (to_split.charAt(i) == ' '){
+//                ret.append(to_split.charAt(i + 1));
+//            }
+//        }
+        String[] words = to_split.split(" ");
+        for(String word: words){
+            ret.append(word.charAt(0));
         }
 
 
